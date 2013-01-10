@@ -6,7 +6,7 @@ class App < Sinatra::Base
   config_file File.join(settings.root,'settings.yml')
 
   configure do
-    set :environment, :production
+    set :environment, :development
     set :public_folder, Proc.new { File.join(root, "static") }
     enable :sessions
   end
